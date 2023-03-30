@@ -2,6 +2,7 @@ package com.memo.controller;
 
 import com.memo.entity.User;
 import com.memo.service.UserService;
+import jdk.nashorn.internal.objects.annotations.Getter;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/main")
+@RequestMapping("/")
 public class MainController {
 
     @Autowired
@@ -20,7 +21,7 @@ public class MainController {
 //        this.service = service;
 //    }
 
-    @GetMapping("/")
+    @GetMapping("")
     public String start(@NotNull Model model){
 
         String id = "chs1825";
